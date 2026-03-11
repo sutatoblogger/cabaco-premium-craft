@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>CABACO Handcrafted | Leather Home Decor & Fashion Premium</title>
+    <meta name="description" content="Bukan Sekedar Kulit, Ini Karya Seni. Produsen kerajinan kulit premium pemenang Good Design Indonesia 2022. Melayani ekspor dan B2B (LPSE LKPP).">
+    
+    <link rel="preload" href="hero-cabaco-tray.webp" as="image" fetchpriority="high">
+    
+    <style>
+        /* NATIVE FONT & CLEAN NOISE BACKGROUND */
+        body {
+            margin: 0; min-height: 100vh;
+            font-family: system-ui, -apple-system, "Playfair Display", serif;
+            background-color: #fafafa; color: #333; overflow-x: hidden;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+
+        /* SOFT AMBIENT GLOW */
+        body::before { content: ""; position: absolute; top: -10vw; right: -10vw; width: 40vw; height: 40vw; background: radial-gradient(circle, rgba(16, 75, 59, 0.15) 0%, transparent 70%); border-radius: 50%; z-index: -1; }
+        
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+
+        /* ELEGANT GLASSMORPHISM HEADER (ATTENTION) */
+        .elegant-header {
+            text-align: center; margin-bottom: 50px; padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 1); border-radius: 2px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            position: relative;
+        }
+        
+        .brand-logo { width: 100px; height: auto; margin-bottom: 20px; mix-blend-mode: multiply; }
+        .award-badge { display: inline-block; background: #d4af37; color: #fff; font-family: sans-serif; font-size: 11px; font-weight: bold; letter-spacing: 2px; padding: 5px 15px; text-transform: uppercase; margin-bottom: 15px; border-radius: 2px; }
+
+        .elegant-header h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 300; letter-spacing: 2px; margin: 0 0 15px; text-transform: uppercase; color: #111; }
+        .elegant-header h1 strong { font-weight: 700; color: #0a2d22; } /* Warna hijau gelap ala foto produk */
+        .elegant-header p { font-size: 1.1rem; color: #666; font-family: sans-serif; max-width: 700px; margin: 0 auto; }
+
+        /* HERO IMAGE */
+        .hero-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 2px; margin-bottom: 50px; box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
+
+        /* BENTO KINETIC (INTEREST & DESIRE) */
+        h2 { text-align: center; font-size: 1.8rem; font-weight: 300; letter-spacing: 3px; margin: 60px 0 40px; text-transform: uppercase; }
+        .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .light-card {
+            background: #fff; padding: 15px; border-radius: 2px; box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            transition: all 0.5s ease; position: relative;
+        }
+        .light-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(16, 75, 59, 0.15); }
+        .img-box { overflow: hidden; border-radius: 2px; aspect-ratio: 4/3; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s; }
+        .light-card:hover img { transform: scale(1.05); }
+        
+        .card-info { text-align: center; padding: 20px 10px 10px; font-family: sans-serif; }
+        .card-info h3 { margin: 0 0 5px; font-size: 1.2rem; font-weight: 600; color: #111; text-transform: uppercase; letter-spacing: 1px;}
+        .card-info p { margin: 0; color: #666; font-size: 0.9rem; line-height: 1.5; }
+
+        /* NATIVE HTML5 ACCORDION FAQ (LUXURY ZERO-JS) */
+        .faq-section { margin-top: 80px; }
+        .faq-container { display: flex; flex-direction: column; gap: 15px; font-family: sans-serif; }
+        details { background: #fff; border: 1px solid #eee; border-radius: 2px; overflow: hidden; transition: all 0.4s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+        details[open] { box-shadow: 0 10px 30px rgba(16, 75, 59, 0.08); border-color: rgba(16, 75, 59, 0.3); }
+        summary { padding: 22px 30px; font-weight: 600; font-size: 1rem; cursor: pointer; color: #111; list-style: none; display: flex; justify-content: space-between; align-items: center; outline: none; letter-spacing: 0.5px; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; font-size: 24px; color: #aaa; font-weight: 300; transition: transform 0.4s ease; }
+        details[open] summary::after { transform: rotate(45deg); color: #0a2d22; }
+        .faq-content { padding: 0 30px 25px; color: #666; font-size: 0.95rem; line-height: 1.7; border-top: 1px solid transparent; }
+
+        /* ELEGANT GREEN BEAM BUTTON (ACTION) */
+        .cta-wrapper { text-align: center; margin: 80px 0; }
+        @property --grad-angle { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+        @keyframes putar-cahaya { 0% { --grad-angle: 0deg; } 100% { --grad-angle: 360deg; } }
+        
+        .gold-laser-btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            background: #fff; color: #111; padding: 18px 45px; font-size: 1rem; font-family: sans-serif; font-weight: 700; letter-spacing: 2px;
+            text-decoration: none; border-radius: 2px; position: relative; text-transform: uppercase; z-index: 1;
+            transition: all 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .gold-laser-btn::before, .gold-laser-btn::after {
+            content: ""; position: absolute; inset: -2px; z-index: -1; border-radius: inherit;
+            background: conic-gradient(from var(--grad-angle), #fff, #0a2d22, #fff, #d4af37, #fff);
+            animation: putar-cahaya 4s linear infinite;
+        }
+        .gold-laser-btn::after { filter: blur(10px); opacity: 0.5; }
+        .gold-laser-btn:hover { background: #0a2d22; color: #fff; transform: translateY(-3px); }
+
+        /* LSI WHITE HAT (SEO) */
+        .seo-faq { margin-top: 60px; border-top: 1px solid #eee; padding-top: 20px; font-size: 0.8rem; color: #aaa; text-align: center; font-family: sans-serif; }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <header class="elegant-header">
+            <img src="logo-cabaco.png" alt="CABACO Handcrafted Logo" class="brand-logo" width="100" height="100" loading="lazy">
+            <br>
+            <span class="award-badge">Winner: Good Design Indonesia 2022</span>
+            <h1>Bukan Sekedar Kulit,<br>Ini <strong>Karya Seni.</strong></h1>
+            <p>Sejak 2016, CABACO mendedikasikan waktu untuk menciptakan mahakarya kerajinan kulit (Home Decor, Fashion, Aksesoris) dengan material terbaik. Dibuat secara <em>handmade</em> oleh pengrajin handal menggunakan teknik <em>hand stitch</em> dan ukir presisi tinggi.</p>
+        </header>
+
+        <img src="hero-cabaco-tray.webp" alt="Panarilla Leather Tray Holder Koleksi Premium Cabaco" class="hero-img" width="1000" height="562" fetchpriority="high" decoding="sync">
+
+        <h2>Koleksi Signature CABACO</h2>
+        
+        <div class="bento-grid">
+            <article class="light-card">
+                <div class="img-box">
+                    <img src="panarilla-tray-1.webp" alt="Panarilla Tray Holder Buffalo Leather" width="400" height="300" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Panarilla Tray Holder</h3>
+                    <p>Terbuat dari kulit <strong>Buffalo Vegetable Tanned</strong> berkualitas tinggi. Didesain dengan teknik <em>molding</em> khusus untuk mempertahankan bentuk yang kokoh dan elegan.</p>
+                </div>
+            </article>
+            <article class="light-card">
+                <div class="img-box">
+                    <img src="panarilla-tray-detail.webp" alt="Detail Ukiran Kulit Handmade Cabaco" width="400" height="300" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Detail Ukiran Presisi</h3>
+                    <p>Memiliki ukiran artistik di kedua sisi <em>tray</em>. Tersedia dalam 1 set (3 ukuran): Large (37x29x3), Medium (33x25x3), dan Small (29x21x3).</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="faq-section">
+            <h2>Layanan B2B & Ekspor (FAQ)</h2>
+            <div class="faq-container">
+                <details>
+                    <summary>Apakah CABACO melayani pengiriman produk untuk ekspor?</summary>
+                    <div class="faq-content">
+                        Ya, kami melayani pengiriman internasional. Produk kerajinan kulit CABACO telah dipercaya dan memiliki negara tujuan ekspor rutin seperti <strong>Australia, United Kingdom (UK), dan Philippines</strong>.
+                    </div>
+                </details>
+                <details>
+                    <summary>Apakah CABACO terdaftar untuk pengadaan barang pemerintah?</summary>
+                    <div class="faq-content">
+                        Benar. Kami memiliki akun resmi di <strong>LPSE LKPP</strong>, sehingga kami siap bermitra untuk proyek pengadaan barang <em>Corporate</em> (B2B) maupun instansi pemerintah (B2G) dengan standar kualitas terbaik.
+                    </div>
+                </details>
+                <details>
+                    <summary>Apakah produk dibuat secara massal (Pabrikasi)?</summary>
+                    <div class="faq-content">
+                        Tidak. Nilai utama CABACO adalah eksklusivitas. Semua produk kami, termasuk tas, sepatu, dompet, dan <em>Home Decor</em> dibuat secara <em>handmade</em> oleh pengrajin lokal berbakat, mulai dari proses pemotongan hingga menjahit. Kami adalah peraih Juara 1 UMKM Award kategori <em>Craft Menembus Batas</em>.
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <div class="cta-wrapper">
+            <a href="https://wa.me/628111929495?text=Halo%20CABACO%20Handcrafted,%20saya%20tertarik%20dengan%20koleksi%20kerajinan%20kulit%20premiumnya..." class="gold-laser-btn" target="_blank" rel="noopener noreferrer">
+                Hubungi Kami via WhatsApp
+            </a>
+            <p style="color: #888; margin-top: 20px; font-size: 0.9rem; font-family: sans-serif;">Terima pesanan Custom B2B & Pengiriman Internasional.</p>
+        </div>
+
+        <footer class="seo-faq">
+            <p><strong>Pencarian Terkait (Tags):</strong> produsen kerajinan kulit asli jawa barat, pabrik leather tray holder buffalo tanned, suplier home decor kulit mewah ekspor, pengrajin tas sepatu dompet kulit asli lpse, cabaco handcrafted good design indonesia.</p>
+        </footer>
+    </main>
+
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "CABACO Handcrafted",
+        "image": "https://domainanda.com/logo-cabaco.png",
+        "description": "Produsen kerajinan kulit asli premium (Home Decor, Fashion). Peraih Good Design Indonesia 2022. Melayani ekspor dan LPSE LKPP.",
+        "priceRange": "$$$",
+        "telephone": "+628111929495",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Jawa Barat",
+          "addressCountry": "ID"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Apakah CABACO melayani pengiriman produk untuk ekspor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ya, produk kerajinan kulit CABACO telah dipercaya dan diekspor ke Australia, United Kingdom (UK), dan Philippines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apakah CABACO terdaftar untuk pengadaan barang pemerintah?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Benar. Kami memiliki akun resmi di LPSE LKPP, siap bermitra untuk pengadaan barang Corporate (B2B) maupun instansi pemerintah."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+</body>
+</html>
